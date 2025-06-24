@@ -8,4 +8,4 @@ function getTime() {
   time.innerText = `${hour} : ${minutes} : ${second}`;
 }
 getTime();
-setInterval(getTime, 1000);
+setInterval(getTime, 1000); 

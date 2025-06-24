@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계속회전하는텍스트</title>
+    <style>
+        @font-face {
+            font-family: 'Cafe24ClassicType-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            padding: 30px 0;
+            margin: 0;
+        }
+
+        .ani_text {
+            width: max-content;
+            /* html의 너비를 최대한 늘리고 싶을 때 사용 */
+            /* 최대 너비는 안에 담고 있는 콘텐츠의 길이에 따라 좌우된다 */
+            /* 텍스트 콘텐츠의 경우 줄바꿈을 하지 않으면 문장 길이에 따라 길어진다 */
+            /* 자식요솨 부모요소를 빠져나가서 콘텐츠 만큼의 영역을 차지하게 됨 */
+            animation-name: text_ani;
+            animation-duration: 40s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            padding-bottom: 40px;
+        }
+
+        .ani_text2 {
+            width: max-content;
+            animation-name: text_ani;
+            animation-duration: 40s;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        section {
+            font-family: 'Cafe24ClassicType-Regular';
+            font-size: 200px;
+            overflow: hidden;
+        }
+
+        @keyframes text_ani {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="ani_text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta explicabo consequuntur doloribus
+                perspiciatis dolore ipsum officia repellendus, non in blanditiis recusandae maiores veniam sint cumque.
+                Sequi dignissimos id incidunt corrupti.</p>
+        </div>
+        <div class="ani_text2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta explicabo consequuntur doloribus
+                perspiciatis dolore ipsum officia repellendus, non in blanditiis recusandae maiores veniam sint cumque.
+                Sequi dignissimos id incidunt corrupti.</p>
+        </div>
+    </section>
+</body>
+
+</html>
