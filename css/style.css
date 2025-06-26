@@ -23,15 +23,21 @@
     src: url(../fonts/ClashDisplay-Semibold.ttf);
 }
 
-/* text_font */
-p {
-    font-family: 'Regular';
+@font-face {
+    font-family: 'NotoSans-DemiLight';
+    src: url(../fonts/NotoSans-DemiLight.otf);
 }
 
-#time {
-    font-family: 'Regular';
+@font-face {
+    font-family: 'NotoSans-Medium';
+    src: url(../fonts/NotoSans-Medium.otf);
 }
-/* text_font */
+
+@font-face {
+    font-family: 'NotoSans-Regular';
+    src: url(../fonts/NotoSans-Regular.otf);
+}
+
 
 html {
     font-size: 10px;
@@ -57,22 +63,31 @@ header {
     padding-top: 40px;
 }
 
+header>p {
+    font-family: 'Medium';
+}
+
 .menu_box {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 2rem;
 }
 
-.menu_box > li > a {
+.menu_box>li>a {
     text-decoration: none;
     color: #ffffff;
-    font-family: 'Light';
+    font-family: 'Regular';
 }
+
+#time {
+    font-family: 'Medium';
+}
+
 /* header 끝 */
 
 /* main_content 시작 */
 .main_content {
-    padding-bottom: 40px;
+    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,9 +96,9 @@ header {
 
 h1 {
     font-family: 'Semibold';
-    font-size: 29rem;
-    /* letter-spacing: -2%; */
-    /* 폰트에 안 먹히는 것 같아서 뺴고 사이즈 조정함 */
+    /* font-size: 30rem; */
+    font-size: clamp(8rem, 15.625vw, 30rem);
+    letter-spacing: -0.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,12 +114,334 @@ h1 {
     font-size: 1.8rem;
 }
 
-.bottom_text_box > p {
+.bottom_text_box>p {
     font-family: 'Medium';
 }
 
-.bottom_text_box > a {
+.bottom_text_box>a {
     text-decoration: none;
     color: #85FF3A;
+    font-family: 'Regular';
 }
+
 /* main_content 끝 */
+
+/* self_introduction_container 시작 */
+.self_introduction_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12rem 0;
+}
+
+.self_introduction_content {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
+
+.en_introduction_box {
+    word-break: keep-all;
+    font-family: 'Regular';
+    font-size: 6.2rem;
+    text-align: start;
+    line-height: 1.2;
+}
+
+.space_1 {
+    display: inline-block;
+    width: 48rem;
+    height: 6.2rem;
+    background-color: transparent;
+}
+
+.space_2 {
+    display: inline-block;
+    width: 6rem;
+    height: 6.2rem;
+    background-color: transparent;
+}
+
+.space_3 {
+    display: inline-block;
+    width: 13rem;
+    height: 6.2rem;
+    background-color: transparent;
+}
+
+.kr_introduction_box {
+    font-family: 'NotoSans-Medium';
+    font-size: 3rem;
+    padding-top: 6rem;
+}
+
+/* self_introduction_container 끝 */
+.ani_text_container {
+    background-color: #85FF3A;
+    display: flex;
+    overflow: hidden;
+    gap: 30rem;
+    user-select: none;
+    padding: 3rem 0;
+}
+
+.ani_text {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 30rem;
+    min-width: 100%;
+    animation: text_ani 25s linear infinite;
+    font-size: 4.8rem;
+    font-family: 'Semibold';
+    letter-spacing: 2.4rem;
+}
+
+
+@keyframes text_ani {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/* ani_text_container 끝 */
+
+/* about_container 시작 */
+.about_container {
+    background-color: #050505;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17.5rem 0;
+}
+
+.about_content {
+    display: flex;
+    gap: 15rem;
+}
+
+.profile_img_box {
+    width: 26.7rem;
+    padding-right: 7rem;
+}
+
+.profile_img_box>figure {
+    padding-bottom: 1.5rem;
+}
+
+.name_box,
+.birth_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.birth_box {
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.name_right {
+    text-align: end;
+}
+
+.name_box>p,
+.birth {
+    font-family: 'Medium';
+    font-size: 2rem;
+}
+
+.name_kr {
+    font-family: 'NotoSans-DemiLight';
+    font-size: 1.6rem;
+}
+
+.name_en,
+.birth_num {
+    font-family: 'Regular';
+    font-size: 1.6rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.title_text {
+    font-family: 'Semibold';
+    font-size: 4rem;
+    padding-bottom: 3rem;
+}
+
+.sub_title_kr {
+    font-family: 'NotoSans-DemiLight';
+    font-size: 1.8rem;
+}
+
+.sub_title_en {
+    font-family: 'Medium';
+    font-size: 1.8rem;
+}
+
+.sub_text {
+    font-family: 'Light';
+    font-size: 1.8rem;
+    padding-top: 0.6rem;
+}
+
+.experience_box>ul>li,
+.lang_box>ul>li {
+    margin-bottom: 1.8rem;
+}
+
+.socials>li {
+    padding-bottom: 1.2rem;
+}
+
+.socials>li>a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Medium';
+    font-size: 1.8rem;
+}
+
+.socials>li>a>span {
+    padding-left: 0.4rem;
+}
+
+/* about_container 끝 */
+
+/* skill_container 시작 */
+.skill_container {
+    background-color: #050505;
+    display: flex;
+    overflow: hidden;
+    gap: 100px;
+    user-select: none;
+    padding: 100px;
+}
+
+.skill_box {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    min-width: 100%;
+    animation: scroll-x 25s linear infinite;
+}
+
+.skill_box img {
+    height: 100px;
+    transition: all 0.3s ease;
+}
+
+.skill_box img:hover {
+    scale: 1.2;
+}
+
+@keyframes scroll-x {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+to {
+    transform: translateX(var(--scroll-end));
+}
+
+/* skill_container 끝 */
+
+/* archive_container 시작 */
+.archive_container {
+    background-color: #050505;
+}
+
+.archive_container > p {
+    font-family: 'Regular';
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.archive_content {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project_box {
+    width: 24.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #ccc;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project_box > p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Medium';
+}
+
+/* 버튼 숨김 상태 */
+.button_box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    z-index: 2;
+}
+
+.btn {
+    padding: 1.5rem 2rem;
+    background-color: #85FF3A;
+    color: #050505;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #6fe024;
+}
+
+/* 마우스 올리면 버튼 박스 표시 */
+.project:hover .button_box {
+    display: flex;
+}
+
+.project:hover {
+    background-color: #3e3e3e;
+}
+
+/* archive_container 끝 */
