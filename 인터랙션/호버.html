@@ -1,29 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Grid</title>
   <style>
-    @font-face {
-  font-family: 'ClashDisplay-Regular';
-  src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
-       url('../fonts/ClashDisplay-Regular.woff') format('woff'),
-       url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ClashDisplay-Medium';
-  src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
-       url('../fonts/ClashDisplay-Medium.woff') format('woff'),
-       url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -31,7 +13,7 @@
     }
 
     html {
-        font-size: 10px;
+      font-size: 10px;
     }
 
     body {
@@ -103,53 +85,55 @@
     .thumb:hover .button-box {
       display: flex;
     }
-    
+
     .thumb:hover {
-        background-color: #3e3e3e;
+      background-color: #3e3e3e;
     }
   </style>
 </head>
+
 <body>
-  <section class="projects">
-    <div class="project">
+  <ul class="projects">
+    <li class="project">
       <div class="thumb">
         <div class="button-box">
           <button class="btn">사이트 이동</button>
           <button class="btn">PDF</button>
         </div>
       </div>
+      <p>Project Name</p>
+    </li>
+
+    <div class="project">
+      <li class="thumb">
+        <div class="button-box">
+          <button class="btn">사이트 이동</button>
+          <button class="btn">PDF</button>
+        </div>
+      </li>
       <p>Project Name</p>
     </div>
 
     <div class="project">
-      <div class="thumb">
+      <li class="thumb">
         <div class="button-box">
           <button class="btn">사이트 이동</button>
           <button class="btn">PDF</button>
         </div>
-      </div>
+      </li>
       <p>Project Name</p>
     </div>
 
     <div class="project">
-      <div class="thumb">
+      <li class="thumb">
         <div class="button-box">
           <button class="btn">사이트 이동</button>
           <button class="btn">PDF</button>
         </div>
-      </div>
+      </li>
       <p>Project Name</p>
     </div>
-
-    <div class="project">
-      <div class="thumb">
-        <div class="button-box">
-          <button class="btn">사이트 이동</button>
-          <button class="btn">PDF</button>
-        </div>
-      </div>
-      <p>Project Name</p>
-    </div>
-  </section>
+  </ul>
 </body>
+
 </html>
