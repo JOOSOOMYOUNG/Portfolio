@@ -50,7 +50,7 @@ html {
     height: 100vh;
 }
 
-.wrapper {
+.main_wrapper {
     padding: 0 100px;
     height: 100vh;
 }
@@ -365,7 +365,14 @@ to {
     background-color: #050505;
 }
 
-.archive_container > p {
+.archive_wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10.4rem 0;
+    gap: 5rem;
+}
+
+.archive_wrapper>p {
     font-family: 'Regular';
     font-size: 2.4rem;
     display: flex;
@@ -399,7 +406,7 @@ to {
     overflow: hidden;
 }
 
-.project_box > p {
+.project_box>p {
     margin-top: 1rem;
     font-size: 2rem;
     text-align: center;
@@ -429,7 +436,9 @@ to {
     font-size: 1.6rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'NotoSans-Medium', 'Medium';
 }
+
 
 .btn:hover {
     background-color: #6fe024;
@@ -442,6 +451,14 @@ to {
 
 .project:hover {
     background-color: #3e3e3e;
+}
+
+.btn span:lang(ko) {
+    font-family: 'NotoSans-Medium';
+}
+
+.btn span:lang(en) {
+    font-family: 'Medium';
 }
 
 /* archive_container 끝 */
