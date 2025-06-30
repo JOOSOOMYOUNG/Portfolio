@@ -8,4 +8,73 @@ function getTime() {
   time.innerText = `${hour} : ${minutes} : ${second}`;
 }
 getTime();
-setInterval(getTime, 1000); 
+setInterval(getTime, 1000);
+
+// plan 타이핑
+const lines = [
+  '<span class="deepblue">const</span> <span class="blue">publisher</span> <span class="white">=</span> <span class="yellow">{</span>',
+  '    <span class="lightblue">currentRole:</span> <span class="orange ko">"웹을 디자인하고 구조화하는 퍼블리셔"</span><span class="white">,</span>',
+  '    <span class="lightblue">growthPath:</span> <span class="orange ko">"프론트엔드 개발까지 배우며 확장할 것"</span><span class="white">,</span>',
+  '    <span class="lightblue">focus:</span> <span class="pink">{</span>',
+  '         <span class="lightblue">detail:</span> <span class="deepblue">true</span><span class="white">,</span>',
+  '         <span class="lightblue">userExperience:</span> <span class="deepblue">true</span>',
+  '    <span class="pink">}</span><span class="white">,</span>',
+  '    <span class="lightblue">goal:</span> <span class="orange ko">"기술을 넘어서, 경험을 설계하는 사람으로 성장하는 것"</span>',
+  '  <span class="yellow">}</span><span class="white">;</span>',
+  '',
+  '  <span class="mint">Object</span><span class="white">.</span><span class="lemon">defineProperty</span><span class="yellow">(</span><span class="blue">publisher</span><span class="white">,</span> <span class="orange">\'goal\'</span><span class="white">,</span> <span class="pink">{</span>',
+  '    <span class="lightblue">writable:</span> <span class="deepblue">false</span><span class="white">,</span>',
+  '    <span class="lightblue">configurable:</span> <span class="deepblue">false</span><span class="white">,</span>',
+  '    <span class="lightblue">enumerable:</span> <span class="deepblue">true</span>',
+  '  <span class="pink">}</span><span class="yellow">)</span><span class="white">;</span>'
+];
+
+const container = document.getElementById('typewriter_container');
+const cursor = document.getElementById('cursor');
+
+async function typeLine(text, parent) {
+  const temp = document.createElement('div');
+  temp.innerHTML = text;
+
+  for (const node of temp.childNodes) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      await typeChars(node.textContent, parent);
+    } else {
+      const span = document.createElement(node.nodeName);
+      span.className = node.className;
+      parent.appendChild(span);
+      await typeChars(node.textContent, span);
+    }
+  }
+}
+
+async function typeChars(text, parent) {
+  let textNode = document.createTextNode('');
+  parent.appendChild(textNode);
+
+  // 커서를 먼저 parent 안에 넣음
+  parent.appendChild(cursor);
+
+  for (const char of text) {
+    textNode.textContent += char;
+    await new Promise(r => setTimeout(r, 35));
+  }
+}
+
+async function typeAllLines() {
+  for (const line of lines) {
+    const div = document.createElement('div');
+    div.className = 'line';
+    container.appendChild(div);
+
+    // typeChars 내부에서 커서가 이 줄로 append됨
+    await typeLine(line, div);
+
+    // 줄 타이핑 끝났으면 커서를 이 div 바깥으로 빼기
+    container.appendChild(cursor);
+
+    await new Promise(r => setTimeout(r, 150));
+  }
+}
+
+window.onload = typeAllLines;

@@ -38,6 +38,10 @@
     src: url(../fonts/NotoSans-Regular.otf);
 }
 
+@font-face {
+    font-family: 'consolas';
+    src: url(../fonts/consolas.ttf);
+}
 
 html {
     font-size: 10px;
@@ -398,6 +402,7 @@ to {
 .project {
     width: 100%;
     aspect-ratio: 3 / 4;
+    background: url(../img/강아지배경.jpg);
     background-color: #ccc;
     position: relative;
     display: flex;
@@ -437,8 +442,8 @@ to {
     cursor: pointer;
     transition: background-color 0.3s;
     font-family: 'NotoSans-Medium', 'Medium';
+    box-shadow: 0.2rem 0.2rem #020600;
 }
-
 
 .btn:hover {
     background-color: #6fe024;
@@ -450,7 +455,7 @@ to {
 }
 
 .project:hover {
-    background-color: #3e3e3e;
+    background: #050505;
 }
 
 .btn span:lang(ko) {
@@ -461,4 +466,186 @@ to {
     font-family: 'Medium';
 }
 
-/* archive_container 끝 */
+/* archive_container 오뚜기 참고하고 싶은데 오래 걸릴 것 같으니 나머지 다 하고 마지막 단계에 이어서 하기 */
+
+/* plan_container 시작 */
+.plan_container {
+    width: 100%;
+    background-color: #121212;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 10rem 0;
+}
+
+.plan_text {
+    width: 132rem;
+    height: 79.2rem;
+    font-family: 'consolas';
+}
+
+.line {
+    display: block;
+    white-space: pre-wrap;
+    min-height: 1em;
+}
+
+.ko {
+    font-family: 'NotoSans-Regular';
+    font-size: 3.2rem;
+}
+
+#typewriter_container {
+    font-size: 3.6rem;
+}
+
+/* 색상 코드 */
+.neongreen {
+    color: #85FF3A;
+}
+
+.deepblue {
+    color: #2693EE;
+}
+
+.blue {
+    color: #4FBCE9;
+}
+
+.lightblue {
+    color: #9CDCFE;
+}
+
+.orange {
+    color: #F0A180;
+}
+
+.pink {
+    color: #FF3AFC;
+}
+
+.yellow {
+    color: #FFC83A;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.lemon {
+    color: #FFFBA4;
+}
+
+.mint {
+    color: #51E2BF;
+}
+
+/* 색상 코드 */
+
+/* 깜빡이는 커서 */
+#cursor {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    animation: blink 1s steps(2, start) infinite;
+    margin-left: 0.2rem;
+    user-select: none;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* plan_container 끝 */
+
+/* contact_container 시작 */
+.contact_container {
+    background-color: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_group {
+    width: 172rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 14.8rem 0;
+}
+
+.footer_left_box > p {
+    color: #ffffff;
+    font-size: 4.8rem;
+    font-family: 'Medium';
+    margin-bottom: 1.6rem;
+}
+
+.footer_left_box > a {
+    color: #85FF3A;
+    text-decoration: none;
+    font-size: 6.4rem;
+    font-family: 'Light';
+}
+
+.link {
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 8.5rem;
+}
+
+.footer_right_box > p {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-family: 'Medium';
+}
+
+.footer_menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer_menu>li>a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Medium';
+    font-size: 1.6rem;
+}
+
+.footer_socials>li {
+    padding-bottom: 0.6rem;
+}
+
+.footer_socials>li>a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Medium';
+    font-size: 1.6rem;
+}
+
+.footer_socials>li>a>span {
+    padding-left: 0.4rem;
+}
+
+/* contact_container 끝 */
