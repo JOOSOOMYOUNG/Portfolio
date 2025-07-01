@@ -1,3 +1,51 @@
+const mouseCursor = document.getElementById('mouse_cursor');
+
+// 네모로 바꾸고 싶은 클래스들
+const squareCursorZones = ['.footer_menu', '.footer_socials', '.footer_left_box>a', 'button'];
+
+document.addEventListener('mousemove', (e) => {
+  mouseCursor.style.left = e.clientX + 'px';
+  mouseCursor.style.top = e.clientY + 'px';
+
+  const element = document.elementFromPoint(e.clientX, e.clientY);
+
+  // 커서 색상 변경
+  if (element.closest('.main_container')) {
+    mouseCursor.style.backgroundColor = 'white';
+  } else if (element.closest('.self_introduction_container')) {
+    mouseCursor.style.backgroundColor = '#85FF3A';
+  } else if (element.closest('.ani_text_container')) {
+    mouseCursor.style.backgroundColor = 'white';
+  } else if (element.closest('.about_container')) {
+    mouseCursor.style.backgroundColor = '#85FF3A';
+  } else if (element.closest('.skill_container')) {
+    mouseCursor.style.backgroundColor = '#85FF3A';
+  } else if (element.closest('.archive_container')) {
+    mouseCursor.style.backgroundColor = 'white';
+  } else if (element.closest('.plan_container')) {
+    mouseCursor.style.backgroundColor = '#85FF3A';
+  } else if (element.closest('.contact_container')) {
+    mouseCursor.style.backgroundColor = '#85FF3A';
+  } else {
+    mouseCursor.style.backgroundColor = 'gray';
+  }
+
+  // 지정 클래스에 마우스 올라간 경우 커서 네모로
+  const isInSquareZone = squareCursorZones.some(className => element.closest(className));
+  mouseCursor.style.borderRadius = isInSquareZone ? '0' : '50%';
+});
+
+// 클릭 시 커서 크기 키우기
+document.addEventListener('mousedown', () => {
+  mouseCursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+});
+
+document.addEventListener('mouseup', () => {
+  mouseCursor.style.transform = 'translate(-50%, -50%) scale(1)';
+});
+
+
+
 // 헤더 상단 현재 시간
 const time = document.getElementById("time");
 function getTime() {
@@ -77,4 +125,22 @@ async function typeAllLines() {
   }
 }
 
-window.onload = typeAllLines;
+// window.onload = typeAllLines;
+
+function checkScroll() {
+  const winH = window.innerHeight;
+  const planContainer = document.querySelector('.plan_container');
+  const rectT = planContainer.getBoundingClientRect().top;
+  const rectB = planContainer.getBoundingClientRect().bottom;
+
+  // plan_container가 뷰포트 안에 들어왔을 때
+  if (rectT < winH && rectB > 0) {
+    window.removeEventListener('scroll', checkScroll);
+    typeAllLines();
+  }
+  checkScroll;
+}
+
+window.addEventListener('scroll', checkScroll);
+
+

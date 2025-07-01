@@ -45,7 +45,42 @@
 
 html {
     font-size: 10px;
+    cursor: none;
 }
+
+/* 스크롤바 */
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #85FF3A;
+    border-radius: 2.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #68d623;
+}
+/* 스크롤바 */
+
+/* 마우스 커서 시작 */
+.custom_cursor {
+    position: fixed;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(1);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    z-index: 9999;
+}
+/* 마우스 커서 끝 */
 
 .main_container {
     background-color: #050505;
@@ -67,7 +102,7 @@ header {
     padding-top: 40px;
 }
 
-header>p {
+header >p {
     font-family: 'Medium';
 }
 
@@ -439,7 +474,7 @@ to {
     border: none;
     border-radius: 6px;
     font-size: 1.6rem;
-    cursor: pointer;
+    cursor: none;
     transition: background-color 0.3s;
     font-family: 'NotoSans-Medium', 'Medium';
     box-shadow: 0.2rem 0.2rem #020600;
@@ -605,6 +640,7 @@ to {
     text-decoration: none;
     font-size: 6.4rem;
     font-family: 'Light';
+    cursor: none;
 }
 
 .link {
@@ -631,6 +667,7 @@ to {
     color: #ffffff;
     font-family: 'Medium';
     font-size: 1.6rem;
+    cursor: none;
 }
 
 .footer_socials>li {
@@ -642,6 +679,7 @@ to {
     color: #ffffff;
     font-family: 'Medium';
     font-size: 1.6rem;
+    cursor: none;
 }
 
 .footer_socials>li>a>span {
