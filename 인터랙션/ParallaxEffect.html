@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Scroll</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #fff;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        section {
+            width: 100%;
+        }
+
+        h1 {
+            padding: 0 100px;
+            color: white;
+            font-size: 200px;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .content {
+            position: absolute;
+            min-height: 100vh;
+            background: #f4f4f4;
+            z-index: 1;
+            padding: 80px 40px;
+            box-sizing: border-box;
+            font-size: 2rem;
+            line-height: 1.6;
+            top: 700px;
+        }
+
+        h1,
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>PORTFOLIO</h1>
+    </section>
+
+    <section class="content">
+        <p>디자인부터 마크업까지, 흐름과 디테일을 놓치지 않고 완성도 높은 결과로 구현하겠습니다.</p>
+        <p>패럴랙스 스크롤을 적용하면 시각적 몰입도가 확실히 달라집니다.</p>
+    </section>
+
+    <script>
+        const hero = document.querySelector('.hero'); // hero 섹션 가져오기
+        let currentY = 0; // 현재 위치
+        let targetY = 0;  // 목표 위치
+        const ease = 0.05; // 부드럽게 이동할 비율
+
+        function animate() {
+            targetY = window.scrollY * 0.8; // 스크롤의 절반만 움직이게 만듦
+            currentY += (targetY - currentY) * ease; // 부드럽게 이동 (가속도처럼)
+
+            hero.style.transform = `translateY(-${currentY}px)`; // 화면 위로 살짝 이동
+
+            requestAnimationFrame(animate); // 계속해서 부드럽게 반복
+        }
+
+        animate(); // 실행 시작
+
+    </script>
+
+</body>
+
+</html>

@@ -58,6 +58,23 @@ function getTime() {
 getTime();
 setInterval(getTime, 1000);
 
+// 페럴렉스
+const hero = document.querySelector('.main_container'); // hero 섹션 가져오기
+let currentY = 0; // 현재 위치
+let targetY = 0;  // 목표 위치
+const ease = 0.05; // 부드럽게 이동할 비율
+
+function animate() {
+  targetY = window.scrollY * 0.8; // 스크롤의 절반만 움직이게 만듦
+  currentY += (targetY - currentY) * ease; // 부드럽게 이동 (가속도처럼)
+
+  hero.style.transform = `translateY(-${currentY}px)`; // 화면 위로 살짝 이동
+
+  requestAnimationFrame(animate); // 계속해서 부드럽게 반복
+}
+
+animate(); // 실행 시작
+
 // plan 타이핑
 const lines = [
   '<span class="deepblue">const</span> <span class="blue">publisher</span> <span class="white">=</span> <span class="yellow">{</span>',

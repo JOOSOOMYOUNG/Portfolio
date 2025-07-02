@@ -87,6 +87,8 @@ html {
     color: #85FF3A;
     width: 100%;
     height: 100vh;
+    position: relative;
+    z-index: 2;
 }
 
 .main_wrapper {
@@ -167,10 +169,13 @@ h1 {
 
 /* self_introduction_container 시작 */
 .self_introduction_container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 12rem 0;
+    top: -40rem;
+    z-index: 1;
 }
 
 .self_introduction_content {
