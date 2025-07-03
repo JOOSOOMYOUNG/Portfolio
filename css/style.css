@@ -56,6 +56,7 @@ span[lang="en"] {
 html {
     font-size: 10px;
     cursor: none;
+    scroll-behavior: smooth;
 }
 
 /* 스크롤바 */
@@ -127,7 +128,7 @@ header > p {
 
 .menu_btn {
     text-decoration: none;
-    cursor: pointer;
+    cursor: none;
     color: #ffffff;
     font-family: 'Regular';
     border: 1px solid transparent;
@@ -156,6 +157,7 @@ header > p {
 
 #time {
     font-family: 'Medium';
+    width: 7.8rem;
 }
 
 /* header 끝 */
@@ -195,6 +197,10 @@ h1 {
     text-decoration: none;
     color: #85FF3A;
     font-family: 'Regular';
+    cursor: none;
+}
+
+.scroll_button {
     cursor: none;
 }
 
@@ -388,6 +394,7 @@ h1 {
     color: #ffffff;
     font-family: 'Medium';
     font-size: 1.8rem;
+    cursor: none;
 }
 
 .socials>li>a>span {

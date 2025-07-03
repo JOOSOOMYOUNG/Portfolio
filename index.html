@@ -15,7 +15,7 @@
     <div id="mouse_cursor" class="custom_cursor"></div>
     <!-- 마우스 커서 -->
 
-    <section class="main_container">
+    <section class="main_container" id="home">
         <div class="main_wrapper">
             <header>
                 <p>
@@ -24,19 +24,19 @@
                 <nav>
                     <ul class="menu_box">
                         <li>
-                            <a href="#" class="menu_btn">Home</a>
+                            <a href="#home" class="menu_btn">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="menu_btn">About</a>
+                            <a href="#about" class="menu_btn">About</a>
                         </li>
                         <li>
-                            <a href="#" class="menu_btn">Skill</a>
+                            <a href="#skill" class="menu_btn">Skill</a>
                         </li>
                         <li>
-                            <a href="#" class="menu_btn">Archive</a>
+                            <a href="#archive" class="menu_btn">Archive</a>
                         </li>
                         <li>
-                            <a href="#" class="menu_btn">Contact</a>
+                            <a href="#contact" class="menu_btn">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -47,17 +47,19 @@
                 <div class="bottom_box">
                     <div class="bottom_text_box">
                         <p>Web Publisher + Designer</p>
-                        <a href="#">More (About)</a>
+                        <a href="#about" class="menu_btn">More (About)</a>
                     </div>
-                    <figure>
-                        <img src="./img/inverted_triangle.png" alt="역삼각형 버튼">
-                    </figure>
+                    <a href="#self_introduction">
+                        <figure class="scroll_button">
+                            <img src="./img/inverted_triangle.png" alt="역삼각형 버튼">
+                        </figure>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="self_introduction_container">
+    <section class="self_introduction_container" id="self_introduction">
         <div class="self_introduction_content">
             <article class="en_introduction_box">
                 <span class="space_1"></span>
@@ -105,7 +107,7 @@
         </h2>
     </section>
 
-    <section class="ani_text_container">
+    <section class="ani_text_container" id="about">
         <div class="ani_text">
             <p>
                 ABOUT ME
@@ -142,7 +144,7 @@
         </div>
     </section>
 
-    <section class="about_container ">
+    <section class="about_container">
         <div class="about_content">
             <div class="profile_img_box">
                 <figure>
@@ -270,7 +272,7 @@
         </div>
     </section>
 
-    <section class="skill_container">
+    <section class="skill_container" id="skill">
         <div class="skill_box">
             <img src="./img/Figma_logo.png" alt="Figma">
             <img src="./img/HTML_logo.png" alt="HTML">
@@ -297,7 +299,7 @@
         </div>
     </section>
 
-    <section class="archive_container">
+    <section class="archive_container" id="archive">
         <div class="archive_wrapper">
             <p>
                 . o O (Design? Publishing? Been there, done that.
@@ -417,7 +419,7 @@
         </div>
     </section>
 
-    <footer class="contact_container ">
+    <footer class="contact_container" id="contact">
         <div class="footer_group">
             <div class="footer_left_box">
                 <p>
@@ -432,19 +434,19 @@
                 <div class="link">
                     <ul class="footer_menu">
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#home">Home</a>
                         </li>
                         <li>
-                            <a href="#">About</a>
+                            <a href="#about">About</a>
                         </li>
                         <li>
-                            <a href="#">Skill</a>
+                            <a href="#skill">Skill</a>
                         </li>
                         <li>
-                            <a href="#">Archive</a>
+                            <a href="#archive">Archive</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#contact">Contact</a>
                         </li>
                     </ul>
 
