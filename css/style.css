@@ -43,6 +43,16 @@
     src: url(../fonts/consolas.ttf);
 }
 
+/* font 시작 */
+span[lang="ko"] {
+    font-family: 'NotoSans-Medium';
+}
+
+span[lang="en"] {
+    font-family: 'Medium';
+}
+/* font 끝 */
+
 html {
     font-size: 10px;
     cursor: none;
@@ -438,7 +448,7 @@ to {
 .archive_wrapper {
     display: flex;
     flex-direction: column;
-    padding: 10.4rem 0;
+    padding: 10.4rem 0 13.9rem 0;
     gap: 5rem;
 }
 
@@ -452,62 +462,95 @@ to {
 }
 
 .archive_content {
+    background-color: #050505;
+    width: 100%;
     display: flex;
+    /* flex-wrap: wrap; */
+    box-sizing: border-box;
+    /* 마진 + 패딩 값으로 커진 콘텐츠를 자동으로 사이즈 조정하여 맞게함. */
     gap: 1rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.project_box {
-    width: 24.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 .project {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    background: url(../img/강아지배경.jpg);
-    background-color: #ccc;
     position: relative;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
-.project_box>p {
-    margin-top: 1rem;
-    font-size: 2rem;
+.text {
     text-align: center;
-    color: #ffffff;
+    font-size: 2rem;
+    margin-top: 1rem;
     font-family: 'Medium';
+    margin-bottom: 0;
+    color: #ffffff;
 }
 
-/* 버튼 숨김 상태 */
+.archive_img_box {
+    width: 40%;
+    height: 70rem;
+    background-color: rgb(197, 197, 197);
+    background-size: cover;
+    border: none;
+}
+
+/* 배경 이미지 설정 */
+.archive_img_box:nth-child(1) {
+    background: url(../img/강아지배경.jpg);
+}
+
+.archive_img_box:nth-child(2) {
+    background: url(../img/강아지배경.jpg);
+}
+
+.archive_img_box:nth-child(3) {
+    background: url(../img/강아지배경.jpg);
+}
+
+.archive_img_box:nth-child(4) {
+    background: url(../img/강아지배경.jpg);
+}
+
+/* 배경 이미지 설정 */
+
+.archive_img_box:hover {
+    background-size: cover;
+    flex-shrink: 0;
+    transition: 0.6s;
+}
+
 .button_box {
-    display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    justify-content: center;
     align-items: center;
-    z-index: 2;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    gap: 2rem;
+    transition: 0.2s;
+}
+
+.project_link {
+    text-decoration: none;
+    color: #050505;
 }
 
 .btn {
+    width: 20%;
     padding: 1.5rem 2rem;
     background-color: #85FF3A;
-    color: #050505;
+    cursor: none;
     border: none;
     border-radius: 0.6rem;
     font-size: 1.6rem;
-    cursor: none;
     transition: background-color 0.3s;
-    font-family: 'NotoSans-Medium', 'Medium';
     box-shadow: 0.2rem 0.2rem #020600;
 }
 
@@ -515,24 +558,11 @@ to {
     background-color: #6fe024;
 }
 
-/* 마우스 올리면 버튼 박스 표시 */
-.project:hover .button_box {
-    display: flex;
+.archive_img_box:hover .button_box {
+    opacity: 1;
 }
 
-.project:hover {
-    background: #050505;
-}
-
-.btn span:lang(ko) {
-    font-family: 'NotoSans-Medium';
-}
-
-.btn span:lang(en) {
-    font-family: 'Medium';
-}
-
-/* archive_container 오뚜기 참고하고 싶은데 오래 걸릴 것 같으니 나머지 다 하고 마지막 단계에 이어서 하기 */
+/* archive_container 끝 */
 
 /* plan_container 시작 */
 .plan_container {
