@@ -82,6 +82,7 @@ html {
 }
 /* 마우스 커서 끝 */
 
+/* main_container 시작 */
 .main_container {
     background-color: #050505;
     color: #85FF3A;
@@ -101,10 +102,10 @@ header {
     display: flex;
     justify-content: space-between;
     font-size: 1.6rem;
-    padding-top: 40px;
+    padding: 4rem 0;
 }
 
-header >p {
+header > p {
     font-family: 'Medium';
 }
 
@@ -114,10 +115,33 @@ header >p {
     gap: 2rem;
 }
 
-.menu_box>li>a {
+.menu_btn {
     text-decoration: none;
+    cursor: pointer;
     color: #ffffff;
     font-family: 'Regular';
+    border: 1px solid transparent;
+    position: relative;
+    transition: 0.4s;
+    padding-bottom: 0.4rem;
+}
+.menu_btn:hover {
+    color: #85FF3A;
+}
+
+.menu_btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #85FF3A;
+    transition: 0.4s;
+}
+
+.menu_btn:hover::after {
+    width: 100%;
 }
 
 #time {
@@ -126,18 +150,16 @@ header >p {
 
 /* header 끝 */
 
-/* main_content 시작 */
 .main_content {
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90%;
+    height: 85%;
 }
 
 h1 {
     font-family: 'Semibold';
-    /* font-size: 30rem; */
     font-size: clamp(8rem, 15.625vw, 30rem);
     letter-spacing: -0.2rem;
     display: flex;
@@ -163,9 +185,10 @@ h1 {
     text-decoration: none;
     color: #85FF3A;
     font-family: 'Regular';
+    cursor: none;
 }
 
-/* main_content 끝 */
+/* main_container 끝 */
 
 /* self_introduction_container 시작 */
 .self_introduction_container {
@@ -176,6 +199,7 @@ h1 {
     padding: 12rem 0;
     top: -40rem;
     z-index: 1;
+    margin-bottom: -40rem;
 }
 
 .self_introduction_content {
@@ -220,6 +244,8 @@ h1 {
 }
 
 /* self_introduction_container 끝 */
+
+/* ani_text_container 시작 */
 .ani_text_container {
     background-color: #85FF3A;
     display: flex;
@@ -477,7 +503,7 @@ to {
     background-color: #85FF3A;
     color: #050505;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.6rem;
     font-size: 1.6rem;
     cursor: none;
     transition: background-color 0.3s;

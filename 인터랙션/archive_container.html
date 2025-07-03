@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>archive_container ui</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            /* 마진 + 패딩 값으로 커진 콘텐츠를 자동으로 사이즈 조정하여 맞게함. */
+            gap: 1rem;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 1rem;
+            font-family: 'Medium';
+            margin-bottom: 0;
+        }
+
+        .img_box {
+            width: 40%;
+            height: 70rem;
+            background-color: rgb(197, 197, 197);
+            background-size: cover;
+            border: none;
+        }
+
+        /* 배경 이미지 설정 */
+        .img_box:nth-child(1) {
+            background: url(./강아지배경.jpg);
+        }
+
+        .img_box:nth-child(2) {
+            background: url(./강아지배경.jpg);
+        }
+
+        .img_box:nth-child(3) {
+            background: url(./강아지배경.jpg);
+        }
+
+        .img_box:nth-child(4) {
+            background: url(./강아지배경.jpg);
+        }
+
+        /* 배경 이미지 설정 */
+
+        .img_box:hover {
+            background-size: cover;
+            flex-shrink: 0;
+            transition: 0.6s;
+        }
+
+        .button_box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            gap: 2rem;
+            transition: 0.2s;
+        }
+
+        .project_link {
+            text-decoration: none;
+            color: #050505;
+        }
+
+        .btn {
+            width: 20%;
+            padding: 1.5rem 2rem;
+            background-color: #85FF3A;
+            cursor: none;
+            border: none;
+            border-radius: 0.6rem;
+            font-size: 1.6rem;
+            transition: background-color 0.3s;
+            font-family: 'NotoSans-Medium', 'Medium';
+            box-shadow: 0.2rem 0.2rem #020600;
+        }
+
+        .btn:hover {
+            background-color: #6fe024;
+        }
+
+        .img_box:hover .button_box {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="img_box">
+            <div class="wrapper">
+                <div class="button_box">
+                    <button class="btn">
+                        <a class="project_link" href="#">
+                            <span lang="ko">
+                                사이트 이동
+                            </span>
+                        </a>
+                    </button>
+                    <button class="btn">
+                        <a class="project_link" href="#">
+                            <span lang="en">
+                                PDF
+                            </span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <p class="text">
+                PROJECT
+            </p>
+        </div>
+        <div class="img_box">
+            <div class="wrapper">
+                <div class="button_box">
+                    <button class="btn">
+                        <a class="project_link" href="#">
+                            <span lang="ko">
+                                사이트 이동
+                            </span>
+                        </a>
+                    </button>
+                    <button class="btn">
+                        <a class="project_link" href="#">
+                            <span lang="en">
+                                PDF
+                            </span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <p class="text">
+                PROJECT
+            </p>
+        </div>
+        <div class="img_box">
+            <div class="wrapper">
+                <div class="button_box">
+                    <button class="btn">
+                        <a class="project_link" href="#">
+                            <span lang="ko">
+                                사이트 이동
+                            </span>
+                        </a>
+                    </button>
+                    <button class="btn">
+                        <a class="project_link" href="#">
+                            <span lang="en">
+                                PDF
+                            </span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <p class="text">
+                PROJECT
+            </p>
+        </div>
+        <div class="img_box">
+            <div class="wrapper">
+                <div class="button_box">
+                    <button class="btn">
+                        <a class="project_link" href="#">
+                            <span lang="ko">
+                                사이트 이동
+                            </span>
+                        </a>
+                    </button>
+                    <button class="btn">
+                        <a class="project_link" href="#">
+                            <span lang="en">
+                                PDF
+                            </span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <p class="text">
+                PROJECT
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

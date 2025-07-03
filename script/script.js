@@ -1,7 +1,7 @@
 const mouseCursor = document.getElementById('mouse_cursor');
 
 // 네모로 바꾸고 싶은 클래스들
-const squareCursorZones = ['.footer_menu', '.footer_socials', '.footer_left_box>a', 'button'];
+const squareCursorZones = ['.menu_box', '.bottom_text_box>a', '.footer_menu', '.footer_socials', '.footer_left_box>a', 'button'];
 
 document.addEventListener('mousemove', (e) => {
   mouseCursor.style.left = e.clientX + 'px';
@@ -155,7 +155,6 @@ function checkScroll() {
     window.removeEventListener('scroll', checkScroll);
     typeAllLines();
   }
-  checkScroll;
 }
 
 window.addEventListener('scroll', checkScroll);
