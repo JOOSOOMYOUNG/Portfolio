@@ -157,7 +157,7 @@ header > p {
 
 #time {
     font-family: 'Medium';
-    width: 7.8rem;
+    width: 8.2rem;
 }
 
 /* header 끝 */
@@ -320,6 +320,13 @@ h1 {
     padding-bottom: 1.5rem;
 }
 
+.info_line {
+    display: none;
+    width: 38rem;
+    height: 0.2rem;
+    background-color: #ffffff;
+}
+
 .name_box,
 .birth_box {
     display: flex;
@@ -472,7 +479,6 @@ to {
     background-color: #050505;
     width: 100%;
     display: flex;
-    /* flex-wrap: wrap; */
     box-sizing: border-box;
     /* 마진 + 패딩 값으로 커진 콘텐츠를 자동으로 사이즈 조정하여 맞게함. */
     gap: 1rem;

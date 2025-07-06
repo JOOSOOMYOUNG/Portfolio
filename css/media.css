@@ -1,0 +1,109 @@
+/* 1024px 이하 - 태블릿 가로 */
+@media (max-width: 1024px) {
+  .archive_content {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .archive_img_box {
+    width: 80%;
+    height: 60rem;
+  }
+
+  .btn {
+    width: 40%;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .archive_wrapper > p {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .text {
+    font-size: 1.8rem;
+  }
+}
+
+/* 768px 이하 - 태블릿 세로 */
+@media (max-width: 768px) {
+  .archive_img_box {
+    width: 90%;
+    height: 55rem;
+  }
+
+  .btn {
+    width: 60%;
+    font-size: 1.5rem;
+    padding: 1rem 1.4rem;
+  }
+
+  .button_box {
+    gap: 1.5rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+  }
+
+  .archive_wrapper > p {
+    font-size: 1.8rem;
+  }
+}
+
+/* 480px 이하 - 작은 모바일 */
+@media (max-width: 480px) {
+  .archive_img_box {
+    width: 95%;
+    height: 48rem;
+  }
+
+  .btn {
+    width: 80%;
+    font-size: 1.4rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .button_box {
+    gap: 1.2rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+
+  .archive_wrapper > p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+/* 360px 이하 - 아주 작은 모바일 */
+@media (max-width: 360px) {
+  .archive_img_box {
+    width: 100%;
+    height: 45rem;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 1.3rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .button_box {
+    gap: 1rem;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+  .archive_wrapper > p {
+    font-size: 1.4rem;
+    padding: 0 1.2rem;
+  }
+}
