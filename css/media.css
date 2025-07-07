@@ -1,9 +1,321 @@
+/* 1440px 이하 */
+@media (max-width: 1440px) {
+
+  /* main_container */
+  h1 {
+    font-size: clamp(5.1rem, 15vw, 21.6rem);
+  }
+
+  /* self_introduction_container */
+  .self_introduction_content {
+    width: 86%;
+  }
+
+  .space_block,
+  .space_block_end {
+    display: block;
+  }
+
+  .space_1 {
+    width: 32rem;
+  }
+
+  .timer_img {
+    display: none;
+  }
+
+  .space_2 {
+    display: inline-block;
+    width: 6.2rem;
+    height: 6.4rem;
+    background-color: transparent;
+  }
+
+  .space_3 {
+    display: none;
+  }
+
+  .space_4 {
+    display: inline-block;
+    width: 3.5rem;
+    height: 6.4rem;
+    background-color: transparent;
+  }
+
+  .space_5 {
+    display: inline-block;
+    width: 15.6rem;
+    height: 6.4rem;
+    background-color: transparent;
+  }
+
+  .space_6 {
+    display: inline-block;
+    width: 53rem;
+    background-color: transparent;
+  }
+
+  .space_7 {
+    display: none;
+  }
+
+  .space_8 {
+    width: 3rem;
+  }
+
+  .space_9 {
+    display: inline-block;
+    width: 50rem;
+    height: 6.4rem;
+    background-color: transparent;
+  }
+
+  /* about_container */
+  .about_container {
+    padding: 11rem 0;
+  }
+
+  .about_content {
+    gap: 15rem;
+  }
+
+  .about_wapper {
+    gap: 10rem;
+  }
+
+  .title_text {
+    padding-bottom: 2rem;
+  }
+
+  .sub_title_kr,
+  .sub_title_en,
+  .sub_text,
+  .experience_box>ul>li,
+  .lang_box>ul>li,
+  .socials>li>a {
+    font-size: 1.6rem;
+  }
+
+  /* plan_container */
+  .plan_text {
+    width: 124rem;
+  }
+
+  /* contact_container */
+  .footer_group {
+    width: 124rem;
+  }
+}
+
+
 /* 1024px 이하 - 태블릿 가로 */
 @media (max-width: 1024px) {
+
+  /* main_container */
+  .main_wrapper {
+    padding: 0 5rem;
+  }
+
+  header {
+    font-size: 1.2rem;
+  }
+
+  .menu_box {
+    gap: 1.8rem;
+  }
+
+  #time {
+    width: 8.3rem;
+  }
+
+  h1 {
+    font-size: clamp(5.1rem, 15.82vw, 16.2rem);
+  }
+
+  .bottom_text_box,
+  .bottom_text_box>p,
+  .bottom_text_box>a {
+    font-size: 1.2rem;
+  }
+
+  /* self_introduction_container */
+  .self_introduction_container {
+    padding: 10.6rem 0;
+  }
+
+  .self_introduction_content {
+    width: 90%;
+  }
+
+  .space_block {
+    display: block;
+  }
+
+  .space_block_end {
+    display: none;
+  }
+
+  .en_introduction_box {
+    font-size: 4.8rem;
+  }
+
+  .en_introduction_box>span>img {
+    width: 4.8rem;
+  }
+
+  .space_1 {
+    width: 17.3rem;
+  }
+
+  .timer_img {
+    display: none;
+  }
+
+  .space_2 {
+    display: inline-block;
+    width: 1.9rem;
+    height: 4.8rem;
+    background-color: transparent;
+  }
+
+  .space_3 {
+    display: none;
+  }
+
+  .space_4 {
+    display: none;
+  }
+
+  .space_5 {
+    display: none;
+  }
+
+  .space_6 {
+    display: inline-block;
+    width: 37rem;
+    height: 4.8rem;
+    background-color: transparent;
+  }
+
+  .space_7 {
+    display: inline-block;
+    width: 30.4rem;
+    height: 4.8rem;
+    background-color: transparent;
+  }
+
+  .space_8 {
+    width: 19rem;
+    height: 4.8rem;
+  }
+
+  .space_9 {
+    display: none;
+  }
+
+  .kr_introduction_box {
+    padding-top: 4rem;
+    font-size: 2.4rem;
+  }
+
+  /* ani_text_container */
+  .ani_text_container {
+    gap: 16rem;
+  }
+
+  .ani_text {
+    gap: 16rem;
+    animation: text_ani 25s linear infinite;
+    font-size: 3.6rem;
+  }
+
+  /* about_container */
+  .about_container {
+    padding: 12rem 0;
+  }
+
+  .about_content {
+    gap: 9rem;
+  }
+
+  .profile_img_box {
+    width: 20.7rem;
+  }
+
+  .profile_img_box>figure {
+    padding-bottom: 1rem;
+  }
+
+  .profile_img_box>figure>img {
+    width: 20.7rem;
+  }
+
+  .birth_box {
+    padding-top: 0.8rem;
+  }
+
+  .name_box>p,
+  .birth {
+    font-size: 1.6rem;
+  }
+
+  .name_kr,
+  .name_en,
+  .birth_num {
+    font-size: 1.2rem;
+  }
+
+  .about_wapper {
+    gap: 4rem;
+  }
+
+  .about {
+    gap: 6rem;
+  }
+
+  .title_text {
+    font-size: 3rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .sub_title_kr,
+  .sub_title_en,
+  .sub_text,
+  .experience_box>ul>li,
+  .lang_box>ul>li,
+  .socials>li>a {
+    font-size: 1.2rem;
+  }
+
+  .experience_box>ul>li,
+  .lang_box>ul>li {
+    margin-bottom: 1.2rem;
+  }
+
+  /* skill_container */
+  .skill_container {
+    gap: 6rem;
+    padding: 6rem;
+  }
+
+  .skill_box {
+    gap: 6rem;
+  }
+
+  .skill_box img {
+    height: 6rem;
+  }
+
+  /* archive_container */
+  .archive_wrapper {
+    padding: 10rem 0;
+    gap: 4rem;
+  }
+  
   .archive_content {
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 6rem;
   }
 
   .archive_img_box {
@@ -11,99 +323,65 @@
     height: 60rem;
   }
 
-  .btn {
-    width: 40%;
-    font-size: 1.6rem;
-    padding: 1.2rem 1.6rem;
-  }
-
-  .archive_wrapper > p {
-    font-size: 2rem;
-    text-align: center;
-    padding: 0 2rem;
-  }
-
   .text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  /* plan_container */
+  .plan_wrapper {
+    gap: 4rem;
+  }
+  
+  .ko {
+    font-size: 2.2rem;
+  }
+
+  .plan_text {
+    width: 92.4rem;
+    height: 57rem;
+  }
+
+  #typewriter_container {
+    font-size: 2.6rem;
+  }
+
+  /* contact_container */
+  .footer_group {
+    width: 92.4rem;
+    margin: 10.5rem 0;
+  }
+
+  .footer_left_box > p {
+    font-size: 3.4rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .footer_left_box > p {
+    font-size: 4.6rem;
+  }
+
+  .link {
+    gap: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .footer_menu>li>a {
+    font-size: 1.2rem;
+  }
+
+  .footer_socials>li>a {
+    font-size: 1.2rem;
   }
 }
 
 /* 768px 이하 - 태블릿 세로 */
 @media (max-width: 768px) {
-  .archive_img_box {
-    width: 90%;
-    height: 55rem;
-  }
-
-  .btn {
-    width: 60%;
-    font-size: 1.5rem;
-    padding: 1rem 1.4rem;
-  }
-
-  .button_box {
-    gap: 1.5rem;
-  }
-
-  .text {
-    font-size: 1.6rem;
-  }
-
-  .archive_wrapper > p {
-    font-size: 1.8rem;
-  }
 }
 
 /* 480px 이하 - 작은 모바일 */
 @media (max-width: 480px) {
-  .archive_img_box {
-    width: 95%;
-    height: 48rem;
-  }
-
-  .btn {
-    width: 80%;
-    font-size: 1.4rem;
-    padding: 1rem 1.2rem;
-  }
-
-  .button_box {
-    gap: 1.2rem;
-  }
-
-  .text {
-    font-size: 1.4rem;
-  }
-
-  .archive_wrapper > p {
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
 }
 
 /* 360px 이하 - 아주 작은 모바일 */
 @media (max-width: 360px) {
-  .archive_img_box {
-    width: 100%;
-    height: 45rem;
-  }
-
-  .btn {
-    width: 90%;
-    font-size: 1.3rem;
-    padding: 0.8rem 1rem;
-  }
-
-  .button_box {
-    gap: 1rem;
-  }
-
-  .text {
-    font-size: 1.3rem;
-  }
-
-  .archive_wrapper > p {
-    font-size: 1.4rem;
-    padding: 0 1.2rem;
-  }
 }

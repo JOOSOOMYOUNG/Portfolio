@@ -104,7 +104,7 @@ html {
 }
 
 .main_wrapper {
-    padding: 0 100px;
+    padding: 0 10rem;
     height: 100vh;
 }
 
@@ -157,7 +157,8 @@ header > p {
 
 #time {
     font-family: 'Medium';
-    width: 8.2rem;
+    width: 8.3rem;
+    text-align: end;
 }
 
 /* header 끝 */
@@ -172,7 +173,7 @@ header > p {
 
 h1 {
     font-family: 'Semibold';
-    font-size: clamp(8rem, 15.625vw, 30rem);
+    font-size: clamp(5.1rem, 15.625vw, 30rem);
     letter-spacing: -0.2rem;
     display: flex;
     flex-direction: column;
@@ -191,6 +192,7 @@ h1 {
 
 .bottom_text_box>p {
     font-family: 'Medium';
+    font-size: 1.6rem;
 }
 
 .bottom_text_box>a {
@@ -198,6 +200,7 @@ h1 {
     color: #85FF3A;
     font-family: 'Regular';
     cursor: none;
+    font-size: 1.6rem;
 }
 
 .scroll_button {
@@ -232,25 +235,57 @@ h1 {
     line-height: 1.2;
 }
 
+.space_block,
+.space_block_end {
+    display: none;
+}
+
 .space_1 {
     display: inline-block;
     width: 48rem;
-    height: 6.2rem;
+    height: 6.4rem;
     background-color: transparent;
 }
 
 .space_2 {
-    display: inline-block;
-    width: 6rem;
-    height: 6.2rem;
-    background-color: transparent;
+    display: none;
 }
 
 .space_3 {
     display: inline-block;
-    width: 13rem;
-    height: 6.2rem;
+    width: 6rem;
+    height: 6.4rem;
     background-color: transparent;
+}
+
+.space_4 {
+    display: none;
+}
+
+.space_5 {
+    display: none;
+}
+
+.space_6 {
+    display: inline-block;
+    width: 13rem;
+    height: 6.4rem;
+    background-color: transparent;
+}
+
+.space_7 {
+    display: none;
+}
+
+.space_8 {
+    display: inline-block;
+    width: 6rem;
+    height: 6.4rem;
+    background-color: transparent;
+}
+
+.space_9 {
+    display: none;
 }
 
 .kr_introduction_box {
@@ -308,12 +343,12 @@ h1 {
 
 .about_content {
     display: flex;
-    gap: 15rem;
+    align-items: center;
+    gap: 22rem;
 }
 
 .profile_img_box {
     width: 26.7rem;
-    padding-right: 7rem;
 }
 
 .profile_img_box>figure {
@@ -351,6 +386,7 @@ h1 {
 .name_kr {
     font-family: 'NotoSans-DemiLight';
     font-size: 1.6rem;
+    padding-bottom: 0.1rem;
 }
 
 .name_en,
@@ -359,10 +395,14 @@ h1 {
     font-size: 1.6rem;
 }
 
+.about_wapper {
+    display: flex;
+    gap: 15rem;
+}
+
 .about {
     display: flex;
     flex-direction: column;
-    gap: 8rem;
 }
 
 .title_text {
@@ -415,22 +455,22 @@ h1 {
     background-color: #050505;
     display: flex;
     overflow: hidden;
-    gap: 100px;
+    gap: 10rem;
     user-select: none;
-    padding: 100px;
+    padding: 10rem;
 }
 
 .skill_box {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 10rem;
     min-width: 100%;
     animation: scroll-x 25s linear infinite;
 }
 
 .skill_box img {
-    height: 100px;
+    height: 10rem;
     transition: all 0.3s ease;
 }
 
