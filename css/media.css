@@ -26,7 +26,7 @@
 
   .space_2 {
     display: inline-block;
-    width: 6.2rem;
+    width: 5rem;
     height: 6.4rem;
     background-color: transparent;
   }
@@ -37,21 +37,21 @@
 
   .space_4 {
     display: inline-block;
-    width: 3.5rem;
+    width: 2.4rem;
     height: 6.4rem;
     background-color: transparent;
   }
 
   .space_5 {
     display: inline-block;
-    width: 15.6rem;
+    width: 15.2rem;
     height: 6.4rem;
     background-color: transparent;
   }
 
   .space_6 {
     display: inline-block;
-    width: 53rem;
+    width: 52rem;
     background-color: transparent;
   }
 
@@ -65,7 +65,7 @@
 
   .space_9 {
     display: inline-block;
-    width: 50rem;
+    width: 45rem;
     height: 6.4rem;
     background-color: transparent;
   }
@@ -79,7 +79,7 @@
     gap: 15rem;
   }
 
-  .about_wapper {
+  .about_wrapper {
     gap: 10rem;
   }
 
@@ -265,7 +265,7 @@
     font-size: 1.2rem;
   }
 
-  .about_wapper {
+  .about_wrapper {
     gap: 4rem;
   }
 
@@ -311,7 +311,7 @@
     padding: 10rem 0;
     gap: 4rem;
   }
-  
+
   .archive_content {
     flex-direction: column;
     align-items: center;
@@ -323,6 +323,10 @@
     height: 60rem;
   }
 
+  .btn {
+    width: 22%;
+  }
+
   .text {
     font-size: 1.6rem;
   }
@@ -331,7 +335,7 @@
   .plan_wrapper {
     gap: 4rem;
   }
-  
+
   .ko {
     font-size: 2.2rem;
   }
@@ -351,12 +355,12 @@
     margin: 10.5rem 0;
   }
 
-  .footer_left_box > p {
+  .footer_left_box>p {
     font-size: 3.4rem;
     margin-bottom: 1.2rem;
   }
-  
-  .footer_left_box > p {
+
+  .footer_left_box>p {
     font-size: 4.6rem;
   }
 
@@ -376,12 +380,96 @@
 
 /* 768px 이하 - 태블릿 세로 */
 @media (max-width: 768px) {
+
+  /* main_container */
+  h1 {
+    font-size: clamp(5.1rem, 15.32vw, 11.8rem);
+  }
+
+  /* self_introduction_container */
+  .self_introduction_content {
+    width: 88%;
+  }
+
+  .space_block_timer {
+    display: block;
+  }
+
+  .space_1 {
+    width: 3rem;
+  }
+
+  .space_2 {
+    width: 19rem;
+  }
+
+  .space_5 {
+    display: inline-block;
+    width: 3.8rem;
+  }
+
+  .space_6 {
+    width: 12rem;
+  }
+
+  .space_7 {
+    display: none;
+  }
+
+  .space_8 {
+    width: 10rem;
+  }
+
+  .space_9 {
+    display: none;
+  }
+
+  .kr_introduction_box {
+    padding-top: 8rem;
+    font-size: 1.8rem;
+  }
+
+  /* about_container */
+  .about_content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile_img_box {
+    display: flex;
+    gap: 5rem;
+    width: 100%;
+  }
+
+  .profile_img_box>figure {
+    padding-bottom: 0;
+  }
+
+  .info_line {
+    display: block;
+    margin-bottom: 19.2rem;
+  }
+
+  .name_box > p,
+  .birth {
+    font-size: 2rem;
+  }
+
+  .name_right>a,
+  .birth_num {
+    font-size: 1.6rem;
+  }
+
+  .birth_box {
+    padding-top: 1.6rem;
+  }
+
+  /* about_wrapper부터 시작 */
 }
 
 /* 480px 이하 - 작은 모바일 */
-@media (max-width: 480px) {
-}
+@media (max-width: 480px) {}
 
 /* 360px 이하 - 아주 작은 모바일 */
-@media (max-width: 360px) {
-}
+@media (max-width: 360px) {}

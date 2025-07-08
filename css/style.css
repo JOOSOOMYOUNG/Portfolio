@@ -236,7 +236,8 @@ h1 {
 }
 
 .space_block,
-.space_block_end {
+.space_block_end,
+.space_block_timer {
     display: none;
 }
 
@@ -403,6 +404,7 @@ h1 {
 .about {
     display: flex;
     flex-direction: column;
+    gap: 8rem;
 }
 
 .title_text {
@@ -593,6 +595,7 @@ to {
 .project_link {
     text-decoration: none;
     color: #050505;
+    cursor: none;
 }
 
 .btn {
@@ -636,6 +639,7 @@ to {
     align-items: center;
     gap: 5rem;
     margin: 10rem 0;
+    overflow: hidden;
 }
 
 .plan_text {
