@@ -360,7 +360,7 @@
     margin-bottom: 1.2rem;
   }
 
-  .footer_left_box>p {
+  .footer_left_box>a {
     font-size: 4.6rem;
   }
 
@@ -387,6 +387,10 @@
   }
 
   /* self_introduction_container */
+  .self_introduction_container {
+    padding: 15.7rem 0;
+  }
+
   .self_introduction_content {
     width: 88%;
   }
@@ -451,7 +455,7 @@
     margin-bottom: 19.2rem;
   }
 
-  .name_box > p,
+  .name_box>p,
   .birth {
     font-size: 2rem;
   }
@@ -465,11 +469,127 @@
     padding-top: 1.6rem;
   }
 
-  /* about_wrapper부터 시작 */
+  .about_wrapper {
+    display: flex;
+    gap: 14rem;
+  }
+
+  /* archive_container */
+  .archive_wrapper>p {
+    font-size: 2rem;
+  }
+
+  .archive_img_box {
+    width: 85%;
+    height: 80rem;
+  }
+
+  /* plan_container */
+  .plan_text {
+    width: 66.8rem;
+    height: 57rem;
+  }
+
+  .footer_group {
+    width: 66.8rem;
+  }
 }
 
 /* 480px 이하 - 작은 모바일 */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  /* main_container */
+  .main_wrapper {
+    padding: 0 3rem;
+  }
+
+  h1 {
+    font-size: clamp(5.1rem, 15.42vw, 7.4rem);
+  }
+
+  header {
+    font-size: 1rem;
+  }
+
+  header>nav {
+    display: none;
+  }
+
+  .bottom_text_box,
+  .bottom_text_box>p,
+  .bottom_text_box>a {
+    font-size: 1rem;
+  }
+
+  /* self_introduction_container */
+  .self_introduction_container {
+    padding: 10rem 0;
+  }
+  
+  .self_introduction_content {
+    width: 88%;
+  }
+  
+  .space_block {
+    display: block;
+  }
+  
+  .space_block_end {
+    display: none;
+  }
+  
+  .en_introduction_box {
+    font-size: 3rem;
+  }
+ 
+  .en_introduction_box>span>img {
+    width: 3rem;
+  }
+
+  .space_1,
+  .space_2,
+  .space_3,
+  .space_4,
+  .space_5,
+  .space_6,
+  .space_7,
+  .space_8,
+  .space_9 {
+    height: 3rem;
+  }
+
+  .space_2 {
+    width: 12rem;
+  }
+
+  .space_6 {
+    width: 8rem;
+  }
+
+  .space_7 {
+    display: none;
+  }
+
+  .space_8 {
+    display: none;
+  }
+
+  .space_9 {
+    display: none;
+  }
+
+  .kr_introduction_box {
+    padding-top: 6rem;
+    font-size: 1.2rem;
+  }
+}
 
 /* 360px 이하 - 아주 작은 모바일 */
-@media (max-width: 360px) {}
+@media (max-width: 360px) {
+
+  /* main_container */
+  h1 {
+    font-size: clamp(5.1rem, 14.44vw, 5.2rem);
+  }
+
+}
