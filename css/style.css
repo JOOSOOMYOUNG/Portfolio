@@ -396,7 +396,7 @@ h1 {
     font-size: 1.6rem;
 }
 
-.about_wapper {
+.about_wrapper {
     display: flex;
     gap: 15rem;
 }
@@ -446,7 +446,7 @@ h1 {
     cursor: none;
 }
 
-.socials>li>a>span {
+.arrow {
     padding-left: 0.4rem;
 }
 
@@ -599,7 +599,7 @@ to {
 }
 
 .btn {
-    width: 20%;
+    width: 22%;
     padding: 1.5rem 2rem;
     background-color: #85FF3A;
     cursor: none;
@@ -743,7 +743,7 @@ to {
     width: 172rem;
     display: flex;
     justify-content: space-between;
-    margin: 14.8rem 0;
+    margin: 14.8rem 10rem;
 }
 
 .footer_left_box > p {
@@ -800,7 +800,7 @@ to {
     cursor: none;
 }
 
-.footer_socials>li>a>span {
+.arrow {
     padding-left: 0.4rem;
 }
 
