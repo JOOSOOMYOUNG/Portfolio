@@ -554,7 +554,8 @@ to {
 
 /* 배경 이미지 설정 */
 .archive_img_box:nth-child(1) {
-    background: url(../img/강아지배경.jpg);
+    background: url(../img/LBM.png);
+    background-size: contain;
 }
 
 .archive_img_box:nth-child(2) {
@@ -630,6 +631,7 @@ to {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .plan_wrapper {
