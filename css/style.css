@@ -59,6 +59,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 /* 스크롤바 */
 
 ::-webkit-scrollbar {
