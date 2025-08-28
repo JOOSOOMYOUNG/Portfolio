@@ -496,6 +496,10 @@
 /* 480px 이하 - 작은 모바일 */
 @media (max-width: 480px) {
 
+  body {
+    overflow: hidden;
+  }
+
   /* main_container */
   .main_wrapper {
     padding: 0 3rem;
