@@ -733,7 +733,7 @@
 }
 
 /* 360px 이하 - 아주 작은 모바일 */
-@media (max-width: 360px) {
+@media (max-width: 420px) {
 
   /* main_container */
   header {
