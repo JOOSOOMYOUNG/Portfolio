@@ -51,6 +51,7 @@ span[lang="ko"] {
 span[lang="en"] {
     font-family: 'Medium';
 }
+
 /* font 끝 */
 
 html {
@@ -59,8 +60,9 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
-  overflow-x: hidden;
+html,
+body {
+    overflow-x: hidden;
 }
 
 /* 스크롤바 */
@@ -82,6 +84,7 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #68d623;
 }
+
 /* 스크롤바 */
 
 /* 마우스 커서 시작 */
@@ -95,7 +98,35 @@ html, body {
     transition: background-color 0.2s ease, transform 0.15s ease;
     z-index: 9999;
 }
+
 /* 마우스 커서 끝 */
+
+/* 우측 메뉴탭 시작 */
+.fixed_nav {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.fixed_menu_box {
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fixed_menu_box > li {
+    margin: 2rem 0;
+}
+
+.fixed_menu_box > li > a {
+    font-family: 'Regular';
+    font-size: 1.4rem;
+}
+
+/* 우측 메뉴탭 끝 */
 
 /* main_container 시작 */
 .main_container {
@@ -120,7 +151,7 @@ header {
     padding: 4rem 0;
 }
 
-header > p {
+header>p {
     font-family: 'Medium';
 }
 
@@ -140,6 +171,7 @@ header > p {
     transition: 0.4s;
     padding-bottom: 0.4rem;
 }
+
 .menu_btn:hover {
     color: #85FF3A;
 }
@@ -752,14 +784,14 @@ to {
     margin: 14.8rem 10rem;
 }
 
-.footer_left_box > p {
+.footer_left_box>p {
     color: #ffffff;
     font-size: 4.8rem;
     font-family: 'Medium';
     margin-bottom: 1.6rem;
 }
 
-.footer_left_box > a {
+.footer_left_box>a {
     color: #85FF3A;
     text-decoration: none;
     font-size: 6.4rem;
@@ -773,7 +805,7 @@ to {
     margin-bottom: 8.5rem;
 }
 
-.footer_right_box > p {
+.footer_right_box>p {
     color: #ffffff;
     font-size: 1.6rem;
     font-family: 'Medium';
@@ -809,4 +841,5 @@ to {
 .arrow {
     padding-left: 0.4rem;
 }
+
 /* contact_container 끝 */

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Spy 메뉴</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* 스크롤 스파이 전용 네비 */
+    .scrollspy-nav {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+    }
+
+    .scrollspy-nav .menu_box {
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .scrollspy-nav .menu_box li {
+      margin: 8px 0;
+    }
+
+    .scrollspy-nav .nav_item {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .scrollspy-nav .nav_item:hover {
+      background: #007bff;
+      color: #fff;
+    }
+
+    .scrollspy-nav .nav_item.active {
+      background: #007bff;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* 데모용 섹션 */
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    #home { background: #f9f9f9; }
+    #about { background: #ffe9dc; }
+    #skill { background: #dceeff; }
+    #archive { background: #fff7d9; }
+    #contact { background: #e4ffd9; }
+  </style>
+</head>
+<body>
+
+  <!-- 기존 홈페이지 nav가 있다면 그대로 유지 -->
+  <nav>
+    <!-- 기존 메뉴 내용 -->
+  </nav>
+
+  <!-- Scroll Spy 전용 네비 -->
+  <nav class="scrollspy-nav">
+    <ul class="menu_box">
+      <li><a href="#home" class="nav_item">Home</a></li>
+      <li><a href="#about" class="nav_item">About</a></li>
+      <li><a href="#skill" class="nav_item">Skill</a></li>
+      <li><a href="#archive" class="nav_item">Archive</a></li>
+      <li><a href="#contact" class="nav_item">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 페이지 섹션 -->
+  <section id="home">🏠 Home</section>
+  <section id="about">👤 About</section>
+  <section id="skill">⚡ Skill</section>
+  <section id="archive">📂 Archive</section>
+  <section id="contact">✉️ Contact</section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".scrollspy-nav .nav_item");
+    const nav = document.querySelector(".scrollspy-nav");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 80;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      // Home / Contact 섹션에서는 메뉴 숨김
+      if (current === "home" || current === "contact") {
+        nav.style.opacity = "0";
+        nav.style.pointerEvents = "none";
+      } else {
+        nav.style.opacity = "1";
+        nav.style.pointerEvents = "auto";
+      }
+
+      // 메뉴 활성화
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

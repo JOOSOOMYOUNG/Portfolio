@@ -111,6 +111,11 @@
 /* 1024px 이하 - 태블릿 가로 */
 @media (max-width: 1024px) {
 
+  /* 우측 메뉴탭 */
+  .fixed_nav {
+    display: none;
+  }
+
   /* main_container */
   .main_wrapper {
     padding: 0 5rem;

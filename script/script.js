@@ -1,7 +1,7 @@
 const mouseCursor = document.getElementById('mouse_cursor');
 
 // 네모로 바꾸고 싶은 클래스들
-const squareCursorZones = ['.menu_box', '.bottom_text_box>a', '.scroll_button', '.socials', '.footer_menu', '.footer_socials', '.footer_left_box>a', 'button'];
+const squareCursorZones = ['.fixed_menu_box>li', '.menu_box', '.bottom_text_box>a', '.scroll_button', '.socials', '.footer_menu', '.footer_socials', '.footer_left_box>a', 'button'];
 
 document.addEventListener('mousemove', (e) => {
   mouseCursor.style.left = e.clientX + 'px';
@@ -26,6 +26,8 @@ document.addEventListener('mousemove', (e) => {
     mouseCursor.style.backgroundColor = '#85FF3A';
   } else if (element.closest('.contact_container')) {
     mouseCursor.style.backgroundColor = '#85FF3A';
+  } else if (element.closest('.fixed_nav')) {
+    mouseCursor.style.backgroundColor = '#85FF3A';
   } else {
     mouseCursor.style.backgroundColor = 'gray';
   }
@@ -44,7 +46,39 @@ document.addEventListener('mouseup', () => {
   mouseCursor.style.transform = 'translate(-50%, -50%) scale(1)';
 });
 
+// 우측 메뉴탭
+const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".fixed_nav .menu_btn");
+    const nav = document.querySelector(".fixed_nav");
 
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 80;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      // Home / Contact 섹션에서는 메뉴 숨김
+      if (current === "home" || current === "contact") {
+        nav.style.opacity = "0";
+        nav.style.pointerEvents = "none";
+      } else {
+        nav.style.opacity = "1";
+        nav.style.pointerEvents = "auto";
+      }
+
+      // 메뉴 활성화
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
 
 // 헤더 상단 현재 시간
 const time = document.getElementById("time");
