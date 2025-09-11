@@ -36,7 +36,7 @@ document.addEventListener('mousemove', (e) => {
   const isInSquareZone = squareCursorZones.some(className => element.closest(className));
   mouseCursor.style.borderRadius = isInSquareZone ? '0' : '50%';
 });
-
+ 
 // 클릭 시 커서 크기 키우기
 document.addEventListener('mousedown', () => {
   mouseCursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
@@ -79,6 +79,36 @@ const sections = document.querySelectorAll("section");
         }
       });
     });
+
+
+// 모달
+// 모든 site-btn 버튼 선택
+const siteBtns = document.querySelectorAll('.site-btn');
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+
+siteBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const href = btn.getAttribute('href');
+        // 사이트 링크가 없으면 모달
+        if (!href || href === "#") {
+            e.preventDefault();
+            modal.style.display = 'flex';
+        }
+        // 실제 링크가 있으면 이동 그대로
+    });
+});
+
+// 모달 닫기
+modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// 모달 배경 클릭 시 닫기
+modal.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
+});
+
 
 // 헤더 상단 현재 시간
 const time = document.getElementById("time");

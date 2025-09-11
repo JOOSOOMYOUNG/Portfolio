@@ -128,6 +128,28 @@ body {
 
 /* 우측 메뉴탭 끝 */
 
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    text-align: center;
+}
+/* 모달 */
+
 /* main_container 시작 */
 .main_container {
     background-color: #050505;
@@ -482,6 +504,11 @@ h1 {
     cursor: none;
 }
 
+.socials>li>a:hover {
+    color: #85FF3A;
+    transition: 0.4s;
+}
+
 .arrow {
     padding-left: 0.4rem;
 }
@@ -629,12 +656,6 @@ to {
     transition: 0.2s;
 }
 
-.project_link {
-    text-decoration: none;
-    color: #050505;
-    cursor: none;
-}
-
 .btn {
     width: 22%;
     padding: 1.5rem 2rem;
@@ -645,10 +666,13 @@ to {
     font-size: 1.6rem;
     transition: background-color 0.3s;
     box-shadow: 0.2rem 0.2rem #020600;
+    text-decoration: none;
+    color: #050505;
+    text-align: center;
 }
 
 .btn:hover {
-    background-color: #6fe024;
+    background-color: #4b9818;
 }
 
 .archive_img_box:hover .button_box {
@@ -797,6 +821,14 @@ to {
     font-size: 6.4rem;
     font-family: 'Light';
     cursor: none;
+    transition: text-shadow 300ms ease, color 300ms ease;
+}
+
+.footer_left_box>a:hover {
+    text-shadow:
+      0 0 6px rgba(133, 255, 58, 0.9),
+      0 0 18px rgba(96, 186, 40, 0.6),
+      0 0 36px rgba(67, 123, 32, 0.35);
 }
 
 .link {
@@ -826,6 +858,11 @@ to {
     cursor: none;
 }
 
+.footer_menu>li>a:hover {
+    color: #85FF3A;
+    transition: 0.4s;
+}
+
 .footer_socials>li {
     padding-bottom: 0.6rem;
 }
@@ -836,6 +873,11 @@ to {
     font-family: 'Medium';
     font-size: 1.6rem;
     cursor: none;
+}
+
+.footer_socials>li>a:hover {
+    color: #85FF3A;
+    transition: 0.4s;
 }
 
 .arrow {
