@@ -6,8 +6,8 @@
     font-size: clamp(5.1rem, 15vw, 21.6rem);
   }
 
-  /* self_introduction_container */
-  .self_introduction_content {
+  /* identity_container */
+  .identity_content {
     width: 86%;
   }
 
@@ -138,12 +138,12 @@
     font-size: 1.2rem;
   }
 
-  /* self_introduction_container */
-  .self_introduction_container {
+  /* identity_container */
+  .identity_container {
     padding: 10.6rem 0;
   }
 
-  .self_introduction_content {
+  .identity_content {
     width: 90%;
   }
 
@@ -155,11 +155,11 @@
     display: none;
   }
 
-  .en_introduction_box {
+  .en_identity_box {
     font-size: 4.8rem;
   }
 
-  .en_introduction_box>span>img {
+  .en_identity_box>span>img {
     width: 4.8rem;
   }
 
@@ -213,7 +213,7 @@
     display: none;
   }
 
-  .kr_introduction_box {
+  .kr_identity_box {
     padding-top: 4rem;
     font-size: 2.4rem;
   }
@@ -383,12 +383,12 @@
     font-size: clamp(5.1rem, 15.32vw, 11.8rem);
   }
 
-  /* self_introduction_container */
-  .self_introduction_container {
+  /* identity_container */
+  .identity_container {
     padding: 15.7rem 0;
   }
 
-  .self_introduction_content {
+  .identity_content {
     width: 88%;
   }
 
@@ -425,7 +425,7 @@
     display: none;
   }
 
-  .kr_introduction_box {
+  .kr_identity_box {
     padding-top: 8rem;
     font-size: 1.8rem;
   }
@@ -519,12 +519,12 @@
     font-size: 1rem;
   }
 
-  /* self_introduction_container */
-  .self_introduction_container {
+  /* identity_container */
+  .identity_container {
     padding: 10rem 0;
   }
 
-  .self_introduction_content {
+  .identity_content {
     width: 88%;
   }
 
@@ -536,11 +536,11 @@
     display: none;
   }
 
-  .en_introduction_box {
+  .en_identity_box {
     font-size: 3rem;
   }
 
-  .en_introduction_box>span>img {
+  .en_identity_box>span>img {
     width: 3rem;
   }
 
@@ -576,7 +576,7 @@
     display: none;
   }
 
-  .kr_introduction_box {
+  .kr_identity_box {
     padding-top: 6rem;
     font-size: 1.2rem;
   }
@@ -751,24 +751,24 @@
     width: 1.2rem;
   }
 
-  /* self_introduction_container */
-  .self_introduction_container {
+  /* identity_container */
+  .identity_container {
     padding: 8rem 0;
   }
 
-  .self_introduction_content {
+  .identity_content {
     width: 84%;
   }
 
-  .en_introduction_box {
+  .en_identity_box {
     font-size: 2rem;
   }
 
-  .en_introduction_box>span>img {
+  .en_identity_box>span>img {
     width: 2rem;
   }
 
-  .kr_introduction_box {
+  .kr_identity_box {
     padding-top: 4rem;
     font-size: 0.8rem;
   }

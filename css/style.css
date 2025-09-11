@@ -213,8 +213,8 @@ h1 {
 
 /* main_container 끝 */
 
-/* self_introduction_container 시작 */
-.self_introduction_container {
+/* identity_container 시작 */
+.identity_container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -225,13 +225,13 @@ h1 {
     margin-bottom: -40rem;
 }
 
-.self_introduction_content {
+.identity_content {
     display: flex;
     justify-content: center;
     width: 85%;
 }
 
-.en_introduction_box {
+.en_identity_box {
     word-break: keep-all;
     font-family: 'Regular';
     font-size: 6.2rem;
@@ -293,13 +293,13 @@ h1 {
     display: none;
 }
 
-.kr_introduction_box {
+.kr_identity_box {
     font-family: 'NotoSans-Medium';
     font-size: 3rem;
     padding-top: 6rem;
 }
 
-/* self_introduction_container 끝 */
+/* self_identity_container 끝 */
 
 /* ani_text_container 시작 */
 .ani_text_container {

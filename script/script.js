@@ -12,7 +12,7 @@ document.addEventListener('mousemove', (e) => {
   // 커서 색상 변경
   if (element.closest('.main_container')) {
     mouseCursor.style.backgroundColor = 'white';
-  } else if (element.closest('.self_introduction_container')) {
+  } else if (element.closest('.identity_container')) {
     mouseCursor.style.backgroundColor = '#85FF3A';
   } else if (element.closest('.ani_text_container')) {
     mouseCursor.style.backgroundColor = 'white';
