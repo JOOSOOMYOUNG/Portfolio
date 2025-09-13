@@ -142,12 +142,35 @@ body {
     z-index: 1;
 }
 
-.modal-content {
-    background-color: #fff;
-    padding: 2rem;
+.modal_content {
+    background-color:rgba(255, 255, 255, 0.95);
+    padding: 4rem;
     border-radius: 0.6rem;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.413);
 }
+
+.modal_content > p {
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+}
+
+#modalClose {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    cursor: none;
+    background-color: #292929;
+    color: #ffffff;
+    transition: background-color 0.3s;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+#modalClose:hover {
+    background-color: #050505;
+    color: #85FF3A;
+}
+
 /* 모달 */
 
 /* main_container 시작 */
@@ -263,6 +286,22 @@ h1 {
 
 .scroll_button {
     cursor: none;
+}
+
+.scroll_button > img {
+  bottom: 30px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
 }
 
 /* main_container 끝 */
@@ -617,20 +656,20 @@ to {
 
 /* 배경 이미지 설정 */
 .archive_img_box:nth-child(1) {
-    background: url(../img/LBM.png);
+    background: url(../img/BG.png);
     background-size: contain;
 }
 
 .archive_img_box:nth-child(2) {
-    background: url(../img/강아지배경.jpg);
+    background: url(../img/BG.png);
 }
 
 .archive_img_box:nth-child(3) {
-    background: url(../img/강아지배경.jpg);
+    background: url(../img/BG.png);
 }
 
 .archive_img_box:nth-child(4) {
-    background: url(../img/강아지배경.jpg);
+    background: url(../img/BG.png);
 }
 
 /* 배경 이미지 설정 */

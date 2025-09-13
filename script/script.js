@@ -1,7 +1,7 @@
 const mouseCursor = document.getElementById('mouse_cursor');
 
 // 네모로 바꾸고 싶은 클래스들
-const squareCursorZones = ['.fixed_menu_box>li', '.menu_box', '.bottom_text_box>a', '.scroll_button', '.socials', '.footer_menu', '.footer_socials', '.footer_left_box>a', 'button'];
+const squareCursorZones = ['.fixed_menu_box>li', '.menu_box', '.bottom_text_box>a', '.scroll_button', '.socials', '.footer_menu', '.footer_socials', '.footer_left_box>a', 'button','.btn'];
 
 document.addEventListener('mousemove', (e) => {
   mouseCursor.style.left = e.clientX + 'px';
@@ -27,6 +27,8 @@ document.addEventListener('mousemove', (e) => {
   } else if (element.closest('.contact_container')) {
     mouseCursor.style.backgroundColor = '#85FF3A';
   } else if (element.closest('.fixed_nav')) {
+    mouseCursor.style.backgroundColor = '#85FF3A';
+  } else if (element.closest('.modal')) {
     mouseCursor.style.backgroundColor = '#85FF3A';
   } else {
     mouseCursor.style.backgroundColor = 'gray';
@@ -82,8 +84,8 @@ const sections = document.querySelectorAll("section");
 
 
 // 모달
-// 모든 site-btn 버튼 선택
-const siteBtns = document.querySelectorAll('.site-btn');
+// 모든 site_btn 버튼 선택
+const siteBtns = document.querySelectorAll('.site_btn');
 const modal = document.getElementById('modal');
 const modalClose = document.getElementById('modalClose');
 

@@ -116,6 +116,20 @@
     display: none;
   }
 
+  /* 모달 */
+  .modal_content {
+    padding: 3rem;
+  }
+
+  .modal_content>p {
+    font-size: 1.4rem;
+  }
+
+  #modalClose {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+
   /* main_container */
   .main_wrapper {
     padding: 0 5rem;
@@ -501,6 +515,21 @@
 /* 480px 이하 - 작은 모바일 */
 @media (max-width: 480px) {
 
+  /* 모달 */
+  .modal_content {
+    padding: 2rem;
+  }
+
+  .modal_content>p {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
+  #modalClose {
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+  }
+
   /* main_container */
   .main_wrapper {
     padding: 0 3rem;
@@ -740,6 +769,21 @@
 /* 360px 이하 - 아주 작은 모바일 */
 @media (max-width: 420px) {
 
+  /* 모달 */
+  .modal_content {
+    padding: 1.5rem;
+  }
+
+  .modal_content>p {
+    font-size: 1rem;
+    padding-bottom: 0.6rem;
+  }
+
+  #modalClose {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
   /* main_container */
   header {
     font-size: 0.8rem;
@@ -950,5 +994,5 @@
     width: 0.6rem;
   }
 
-  
+
 }
