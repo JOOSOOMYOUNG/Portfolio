@@ -86,18 +86,36 @@ const sections = document.querySelectorAll("section");
 // 모달
 // 모든 site_btn 버튼 선택
 const siteBtns = document.querySelectorAll('.site_btn');
+const pdfBtns = document.querySelectorAll('.pdf_btn');
 const modal = document.getElementById('modal');
 const modalClose = document.getElementById('modalClose');
+const modalMessage = document.getElementById('modalMessage');
 
+function openModal(message) {
+    modalMessage.textContent = message;
+    modal.style.display = 'flex';
+}
+
+// 사이트
 siteBtns.forEach(btn => {
     btn.addEventListener('click', function(e) {
         const href = btn.getAttribute('href');
         // 사이트 링크가 없으면 모달
         if (!href || href === "#") {
             e.preventDefault();
-            modal.style.display = 'flex';
+            openModal("사이트가 없는 프로젝트입니다. PDF를 확인해주세요.");
         }
-        // 실제 링크가 있으면 이동 그대로
+    });
+});
+
+// PDF
+pdfBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+        const href = btn.getAttribute('href');
+        if (!href || href === "#") {
+            e.preventDefault();
+            openModal("PDF 파일이 준비되지 않았습니다.");
+        }
     });
 });
 
