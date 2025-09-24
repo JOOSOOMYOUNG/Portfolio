@@ -308,6 +308,7 @@ h1 {
 
 /* identity_container 시작 */
 .identity_container {
+    background-color: #ffffff;
     position: relative;
     display: flex;
     flex-direction: column;

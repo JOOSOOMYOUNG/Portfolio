@@ -1,44 +1,45 @@
 const mouseCursor = document.getElementById('mouse_cursor');
 
-// 네모로 바꾸고 싶은 클래스들
-const squareCursorZones = ['.fixed_menu_box>li', '.menu_box', '.bottom_text_box>a', '.scroll_button', '.socials', '.footer_menu', '.footer_socials', '.footer_left_box>a', 'button','.btn'];
-
 document.addEventListener('mousemove', (e) => {
   mouseCursor.style.left = e.clientX + 'px';
   mouseCursor.style.top = e.clientY + 'px';
-
+  
   const element = document.elementFromPoint(e.clientX, e.clientY);
-
-  // 커서 색상 변경
-  if (element.closest('.main_container')) {
+  
+  const greenAreas = [
+    '.identity_container',
+    '.about_container',
+    '.skill_container',
+    '.plan_container',
+    '.contact_container',
+    '.fixed_nav',
+    '.modal'
+  ];
+  
+  const whiteAreas = [
+    '.main_container',
+    '.ani_text_container',
+    '.archive_container'
+  ];
+  
+  if (greenAreas.some(cls => element.closest(cls))) {
+    mouseCursor.style.backgroundColor = '#85FF3A';
+  } else if (whiteAreas.some(cls => element.closest(cls))) {
     mouseCursor.style.backgroundColor = 'white';
-  } else if (element.closest('.identity_container')) {
-    mouseCursor.style.backgroundColor = '#85FF3A';
-  } else if (element.closest('.ani_text_container')) {
-    mouseCursor.style.backgroundColor = 'white';
-  } else if (element.closest('.about_container')) {
-    mouseCursor.style.backgroundColor = '#85FF3A';
-  } else if (element.closest('.skill_container')) {
-    mouseCursor.style.backgroundColor = '#85FF3A';
-  } else if (element.closest('.archive_container')) {
-    mouseCursor.style.backgroundColor = 'white';
-  } else if (element.closest('.plan_container')) {
-    mouseCursor.style.backgroundColor = '#85FF3A';
-  } else if (element.closest('.contact_container')) {
-    mouseCursor.style.backgroundColor = '#85FF3A';
-  } else if (element.closest('.fixed_nav')) {
-    mouseCursor.style.backgroundColor = '#85FF3A';
-  } else if (element.closest('.modal')) {
-    mouseCursor.style.backgroundColor = '#85FF3A';
   } else {
     mouseCursor.style.backgroundColor = 'gray';
   }
+  
 
-  // 지정 클래스에 마우스 올라간 경우 커서 네모로
+  // 네모로 바꾸고 싶은 클래스들
+  const squareCursorZones = ['.fixed_menu_box>li', '.menu_box', '.bottom_text_box>a', '.scroll_button', '.socials', '.footer_menu', '.footer_socials', '.footer_left_box>a', 'button', '.btn'];
+
+  // 지정 클래스에 마우스 호버 시 커서 네모
   const isInSquareZone = squareCursorZones.some(className => element.closest(className));
   mouseCursor.style.borderRadius = isInSquareZone ? '0' : '50%';
 });
- 
+
+
 // 클릭 시 커서 크기 키우기
 document.addEventListener('mousedown', () => {
   mouseCursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
@@ -48,85 +49,38 @@ document.addEventListener('mouseup', () => {
   mouseCursor.style.transform = 'translate(-50%, -50%) scale(1)';
 });
 
+
 // 우측 메뉴탭
 const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".fixed_nav .menu_btn");
-    const nav = document.querySelector(".fixed_nav");
+const navLinks = document.querySelectorAll(".fixed_nav .menu_btn");
+const nav = document.querySelector(".fixed_nav");
 
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 80;
-        const sectionHeight = section.clientHeight;
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 80;
+    const sectionHeight = section.clientHeight;
 
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          current = section.getAttribute("id");
-        }
-      });
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
 
-      // Home / Contact 섹션에서는 메뉴 숨김
-      if (current === "home" || current === "contact") {
-        nav.style.opacity = "0";
-        nav.style.pointerEvents = "none";
-      } else {
-        nav.style.opacity = "1";
-        nav.style.pointerEvents = "auto";
-      }
+  if (current === "home" || current === "identity" || current === "contact") {
+    nav.style.opacity = "0";
+    nav.style.pointerEvents = "none";
+  } else {
+    nav.style.opacity = "1";
+    nav.style.pointerEvents = "auto";
+  }
 
-      // 메뉴 활성화
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
-    });
-
-
-// 모달
-// 모든 site_btn 버튼 선택
-const siteBtns = document.querySelectorAll('.site_btn');
-const pdfBtns = document.querySelectorAll('.pdf_btn');
-const modal = document.getElementById('modal');
-const modalClose = document.getElementById('modalClose');
-const modalMessage = document.getElementById('modalMessage');
-
-function openModal(message) {
-    modalMessage.textContent = message;
-    modal.style.display = 'flex';
-}
-
-// 사이트
-siteBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        const href = btn.getAttribute('href');
-        // 사이트 링크가 없으면 모달
-        if (!href || href === "#") {
-            e.preventDefault();
-            openModal("사이트가 없는 프로젝트입니다. PDF를 확인해주세요.");
-        }
-    });
-});
-
-// PDF
-pdfBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
-        const href = btn.getAttribute('href');
-        if (!href || href === "#") {
-            e.preventDefault();
-            openModal("PDF 파일이 준비되지 않았습니다.");
-        }
-    });
-});
-
-// 모달 닫기
-modalClose.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-// 모달 배경 클릭 시 닫기
-modal.addEventListener('click', e => {
-    if (e.target === modal) modal.style.display = 'none';
+  // 메뉴 활성화
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
 
 
@@ -143,21 +97,22 @@ getTime();
 setInterval(getTime, 1000);
 
 // 페럴렉스
-const hero = document.querySelector('.main_container'); // hero 섹션 가져오기
-let currentY = 0; // 현재 위치
-let targetY = 0;  // 목표 위치
-const ease = 0.05; // 부드럽게 이동할 비율
+const hero = document.querySelector('.main_container');
+let currentY = 0;
+let targetY = 0;
+const ease = 0.05;
 
 function animate() {
-  targetY = window.scrollY * 0.8; // 스크롤의 절반만 움직이게 만듦
-  currentY += (targetY - currentY) * ease; // 부드럽게 이동 (가속도처럼)
+  targetY = window.scrollY * 0.8;
+  currentY += (targetY - currentY) * ease;
 
-  hero.style.transform = `translateY(-${currentY}px)`; // 화면 위로 살짝 이동
+  hero.style.transform = `translateY(-${currentY}px)`;
 
-  requestAnimationFrame(animate); // 계속해서 부드럽게 반복
+  requestAnimationFrame(animate);
 }
 
-animate(); // 실행 시작
+animate();
+
 
 // plan 타이핑
 const lines = [
@@ -244,3 +199,47 @@ function checkScroll() {
 window.addEventListener('scroll', checkScroll);
 
 
+// 모달
+const siteBtns = document.querySelectorAll('.site_btn');
+const pdfBtns = document.querySelectorAll('.pdf_btn');
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+const modalMessage = document.getElementById('modalMessage');
+
+function openModal(message) {
+  modalMessage.textContent = message;
+  modal.style.display = 'flex';
+}
+
+// 사이트
+siteBtns.forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    const href = btn.getAttribute('href');
+    // 사이트 링크가 없으면 모달
+    if (!href || href === "#") {
+      e.preventDefault();
+      openModal("사이트가 없는 프로젝트입니다. PDF를 확인해주세요.");
+    }
+  });
+});
+
+// PDF
+pdfBtns.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const href = btn.getAttribute('href');
+    if (!href || href === "#") {
+      e.preventDefault();
+      openModal("PDF 파일이 준비되지 않았습니다.");
+    }
+  });
+});
+
+// 모달 닫기
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// 배경 클릭 시 닫기
+modal.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
+});

@@ -506,9 +506,22 @@
     width: 66.8rem;
     height: 57rem;
   }
-
+  
+  /* contact_container */
   .footer_group {
     width: 66.8rem;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  .link {
+    gap: 22.6rem;
+    margin-bottom: 0;
+  }
+
+  .footer_right_box {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -718,7 +731,6 @@
 
   /* contact_container */
   .footer_group {
-    flex-direction: column;
     width: 42rem;
     gap: 5rem;
     margin: 5rem 3rem;
@@ -730,12 +742,7 @@
   }
 
   .footer_left_box>a {
-    font-size: 4.2rem;
-  }
-
-  .footer_right_box {
-    display: flex;
-    justify-content: space-between;
+    font-size: 3.2rem;
   }
 
   .link {
@@ -965,7 +972,7 @@
   }
 
   .footer_left_box>a {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   .link {
@@ -993,6 +1000,5 @@
   .arrow>img {
     width: 0.6rem;
   }
-
 
 }
