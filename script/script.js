@@ -1,11 +1,25 @@
+// favicon
+var faviconRoute = '/img/';
+var faviconNames = ['f2.ico', 'f1.ico', 'f0.ico'];
+
+var idx = 0;
+
+setInterval(func, 600);
+
+function func() {
+  document.querySelector("#favicon").setAttribute('href', faviconRoute + faviconNames[idx++]);
+  idx %= faviconNames.length;
+}
+
+
 const mouseCursor = document.getElementById('mouse_cursor');
 
 document.addEventListener('mousemove', (e) => {
   mouseCursor.style.left = e.clientX + 'px';
   mouseCursor.style.top = e.clientY + 'px';
-  
+
   const element = document.elementFromPoint(e.clientX, e.clientY);
-  
+
   const greenAreas = [
     '.identity_container',
     '.about_container',
@@ -15,13 +29,13 @@ document.addEventListener('mousemove', (e) => {
     '.fixed_nav',
     '.modal'
   ];
-  
+
   const whiteAreas = [
     '.main_container',
     '.ani_text_container',
     '.archive_container'
   ];
-  
+
   if (greenAreas.some(cls => element.closest(cls))) {
     mouseCursor.style.backgroundColor = '#85FF3A';
   } else if (whiteAreas.some(cls => element.closest(cls))) {
@@ -29,7 +43,7 @@ document.addEventListener('mousemove', (e) => {
   } else {
     mouseCursor.style.backgroundColor = 'gray';
   }
-  
+
 
   // 네모로 바꾸고 싶은 클래스들
   const squareCursorZones = ['.fixed_menu_box>li', '.menu_box', '.bottom_text_box>a', '.scroll_button', '.socials', '.footer_menu', '.footer_socials', '.footer_left_box>a', 'button', '.btn'];
@@ -74,7 +88,6 @@ window.addEventListener("scroll", () => {
     nav.style.pointerEvents = "auto";
   }
 
-  // 메뉴 활성화
   navLinks.forEach(link => {
     link.classList.remove("active");
     if (link.getAttribute("href") === "#" + current) {
@@ -95,6 +108,7 @@ function getTime() {
 }
 getTime();
 setInterval(getTime, 1000);
+
 
 // 페럴렉스
 const hero = document.querySelector('.main_container');
@@ -156,7 +170,6 @@ async function typeChars(text, parent) {
   let textNode = document.createTextNode('');
   parent.appendChild(textNode);
 
-  // 커서를 먼저 parent 안에 넣음
   parent.appendChild(cursor);
 
   for (const char of text) {
@@ -171,10 +184,8 @@ async function typeAllLines() {
     div.className = 'line';
     container.appendChild(div);
 
-    // typeChars 내부에서 커서가 이 줄로 append됨
     await typeLine(line, div);
 
-    // 줄 타이핑 끝났으면 커서를 이 div 바깥으로 빼기
     container.appendChild(cursor);
 
     await new Promise(r => setTimeout(r, 150));
@@ -189,7 +200,6 @@ function checkScroll() {
   const rectT = planContainer.getBoundingClientRect().top;
   const rectB = planContainer.getBoundingClientRect().bottom;
 
-  // plan_container가 뷰포트 안에 들어왔을 때
   if (rectT < winH && rectB > 0) {
     window.removeEventListener('scroll', checkScroll);
     typeAllLines();
@@ -215,7 +225,6 @@ function openModal(message) {
 siteBtns.forEach(btn => {
   btn.addEventListener('click', function (e) {
     const href = btn.getAttribute('href');
-    // 사이트 링크가 없으면 모달
     if (!href || href === "#") {
       e.preventDefault();
       openModal("사이트가 없는 프로젝트입니다. PDF를 확인해주세요.");
