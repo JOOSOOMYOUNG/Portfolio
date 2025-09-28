@@ -1,5 +1,5 @@
 // favicon
-var faviconRoute = '/img/';
+var faviconRoute = './img/';
 var faviconNames = ['f2.ico', 'f1.ico', 'f0.ico'];
 
 var idx = 0;
@@ -227,7 +227,7 @@ siteBtns.forEach(btn => {
     const href = btn.getAttribute('href');
     if (!href || href === "#") {
       e.preventDefault();
-      openModal("사이트가 없는 프로젝트입니다. PDF를 확인해주세요.");
+      openModal("사이트는 준비되지 않았지만, 아래 PDF에서 상세히 보실 수 있습니다.");
     }
   });
 });
